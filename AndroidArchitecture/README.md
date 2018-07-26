@@ -9,7 +9,7 @@
 애플리케이션, 운영체제, 런타임 환경, 미들웨어, 각종 서비스와 라이브러리등이 겹겹이 모여 구성된 것이라고 생각할 수 있다.  
 시각적으로 표현하면 아래 그림과 같다.  
 
-![안드로이드 소프트웨어 스택](image/stack.png)
+![안드로이드 소프트웨어 스택](https://github.com/SeungYongSon/Gaining-Ground-To-Android/blob/master/AndroidArchitecture/image/Stack.png, 안드로이드 소프트웨어 스택)
 
 이제 스택의 각층에 대해 알아볼 것이다.
 
