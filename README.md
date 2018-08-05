@@ -10,7 +10,6 @@
 
 "Awesome Android Developer 가 되겠다는 내 자신을 믿을 것이며, 그 자신을 믿는 나를 믿을 것이다." - Seungyong Son
 
-
 ```
 
 
