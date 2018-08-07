@@ -15,6 +15,6 @@
 
 애플리케이션은 프로세스로 실행되고 컴포넌트로 구성된다. 안드로이드 시스템에서 프로세스의 현재 상태는 애플리케이션 내부에서 실행중인 컴포넌트(액티비티나 서비스 등의) 우선순위에 의해 결정된다.
 
-![안드로이드 프로세스 상태](https://github.com/SeungYongSon/Gaining-Ground-To-Android/tree/master/3.%20Android%20Application%20%26%20Activity%20Lifecycle/image/ProcessState.png "안드로이드 프로세스 상태")
+![안드로이드 프로세스 상태](https://github.com/SeungYongSon/Gaining-Ground-To-Android/blob/master/3.%20Android%20Application%20%26%20Activity%20Lifecycle/image/ProcessState.png "안드로이드 프로세스 상태")
 
 위에 그림 처럼 어떤 시점에서든 프로세스는 다음 다섯 가지 중 하나의 상태가 될 수 있다.
