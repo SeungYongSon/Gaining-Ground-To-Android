@@ -49,7 +49,8 @@ findViewById() 는 액티비티나 프래그먼트 등 레이아웃 파일에 �
 Android KTX 는 뷰의 ID 를 사용하여 해당 뷰의 인스턴스에 바로 접근 할 수 있게 해준다.  
 다시말해, findViewByID() 때문에 생긴 몇십 줄의 코드를 비약적으로 줄일 수 있다는 것이다.
 
-```
+
+```Kotlin
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
@@ -70,5 +71,4 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-### 1-3.
-
+### 1-3. 더 나아가기
