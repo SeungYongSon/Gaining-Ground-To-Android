@@ -7,7 +7,7 @@ Android KTX 의 목적은 Kotlin의 간결함과 기능을 활용하여 Android 
 
 ### 1-1. 시작하기
 Android KTX 를 프로젝트에 사용하기 위해서는 build.gradle 파일에 아래처럼 추가 한다.
-```
+```Gradle
 repositories {
     google()
 }
@@ -15,14 +15,14 @@ repositories {
 
 build.gradle(Project: 프로젝트명) 부분
 
-```
+```Gradle
 dependencies {
     implementation 'androidx.core:core-ktx:1.0.0-alpha1'
 }
 ```
 build.gradle(Module: app) 부분
 
-```
+```Kotlin
 import kotlinx.android.synthetic.main.<layout>.*
 ```
 위에 처럼 import 해서 사용하자
