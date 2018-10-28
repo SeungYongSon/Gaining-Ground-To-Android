@@ -61,4 +61,25 @@ OnScrollListener 를 이용해 스크롤이 하단에 도달하게 될 때,
 
 ## 3. Paging Library
 
-2017년 9월, Google 에서 Android Paging Libaray 를 발표를 했습니다.
+2017년 9월, Google 에서 Android Paging Libaray 를 발표를 했습니다.  
+
+Paging Library는 대량의 데이터 셋을 청크 단위로 RecyclerView 에 쉽게 로드할 수 있게 해줍니다.  
+무엇보다 위에 언급했던 문제들을 해결해주는 새로운 방식으로 구현 되어 있습니다.
+
+Paging Library는 Room 이 대량의 쿼리 결과를 어떻게 다룰지에서 비롯 되었습니다.  
+SQLiteCursor 는 내부적으로 CusorWindow 를 통해 2MB의 고정된 페이징을 구현합니다.  
+
+쿼리의 결과가 10MB 라고 할 때, 쿼리 결과를 한번에 적재하지 않고 이중 일부인 2MB 만을  
+CursorWindow 에 로드한다는 의미입니다.  
+
+만약 SQLiteCursor 가 존재하지 않는 행을 요청하게 되면  
+CusorWindow 는 해당 행이 존재하는 청크를 불러와 윈도우를 다시 로드하는 형태로 페이징을 수행합니다.
+
+하지만 CusorWindow 를 이용한 내부 페이징은 몇 가지 이유로 성능 문제를 일으킬 수 있고  
+예측 불가능한 부분이 있다고 합니다.
+
+그래서 Paging Library 는 단일 CursorWindow 내에서 동작하는 (SQLiteCursor 의 내부페이징이 동작하지 않도록)  
+스몰 쿼리를 지향하는 것이 핵심이라고 합니다.
+
+Paging Library 는 PagedList, DataSource, PagedListAdapter 로 구성되어 있습니다.
+
