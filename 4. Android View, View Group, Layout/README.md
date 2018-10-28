@@ -50,4 +50,4 @@
 
 이해를 위해 밑에 인터페이스를 보자.  
 
-![이해를 위한 인터페이스](Android%20View,%20View%20Group,%20Layout/image/Interface.png "이해를 위한 인터페이스")
+![이해를 위한 인터페이스](4.%20Android%20View%2C%20View%20Group%2C%20Layout/image/image/Interface.png "이해를 위한 인터페이스")
