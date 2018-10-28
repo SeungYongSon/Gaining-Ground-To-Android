@@ -14,8 +14,10 @@
 
 ## 공부한 것
 
-* [안드로이드 아키텍쳐](https://github.com/SeungYongSon/Gaining-Ground-To-Android/tree/master/1.%20Android%20Architecture)
+* [안드로이드 아키텍쳐](1.%20Android%20Architecture)
 
-* [안드로이드 액티비티와 인텐트 개요](https://github.com/SeungYongSon/Gaining-Ground-To-Android/tree/master/2.%20Activity%20%26%20Intent)
+* [안드로이드 액티비티와 인텐트 개요](2.%20Activity%20%26%20Intent)
 
-* [안드로이드 애플리케이션과 액티비티 생명주기](https://github.com/SeungYongSon/Gaining-Ground-To-Android/tree/master/3.%20Android%20Application%20%26%20Activity%20Lifecycle)
+* [안드로이드 애플리케이션과 액티비티 생명주기](3.%20Android%20Application%20%26%20Activity%20Lifecycle)
+
+* [안드로이드 뷰, 뷰 그룹, 레이아웃](4.%20Android%20View%2C%20View%20Group%2C%20Layout)
