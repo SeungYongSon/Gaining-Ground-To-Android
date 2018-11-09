@@ -159,6 +159,23 @@ uri 로만 이미지를 설정해서는 안되고
 저는 비트맵을 줄이기 위해 라이브러리를 쓰는 것은 비효울적이라고 생각하여 직접 비트맵 크기를 줄이기로 하였습니다.
 
 ``` Kotlin
+    private fun decodeSampledBitmapFromURI(path: String, reqWidth: Int, reqHeight: Int): Bitmap? {
+        return BitmapFactory.Options().run {
+            inJustDecodeBounds = true
+            BitmapFactory.decodeFile(path, this)
+
+            inSampleSize = calculateInSampleSize(this, reqWidth, reqHeight)
+            inJustDecodeBounds = false
+            BitmapFactory.decodeFile(path, this)
+        }
+    }
+```
+저는 위에 코드 처럼 사진의 PATH URI 를 BitmapFactory 를 통해 Bitmap 으로 변환과 동시에 Bitmap 의 크기를 최적화 시키는 함수를 만들었습니다.
+
+이 코드에서 최적화를 담당한 함수는 calculateInSampleSize 입니다.  
+코드는 아래와 같습니다.
+
+``` Kotlin
     private fun calculateInSampleSize(options: BitmapFactory.Options, reqWidth: Int, reqHeight: Int): Int {
         val (height: Int, width: Int) = options.run { outHeight to outWidth }
         var inSampleSize = 1
@@ -173,19 +190,9 @@ uri 로만 이미지를 설정해서는 안되고
         }
         return inSampleSize
     }
-
-
-    private fun decodeSampledBitmapFromURI(path: String, reqWidth: Int, reqHeight: Int): Bitmap? {
-        return BitmapFactory.Options().run {
-            inJustDecodeBounds = true
-            BitmapFactory.decodeFile(path, this)
-
-            inSampleSize = calculateInSampleSize(this, reqWidth, reqHeight)
-            inJustDecodeBounds = false
-            BitmapFactory.decodeFile(path, this)
-        }
-    }
 ```
+
+아래 코드는 적용 시킨 것입니다.  
 
 ``` Kotlin
 val img = decodeSampledBitmapFromURI(albumList[position], 200, 200)
@@ -193,3 +200,4 @@ val img = decodeSampledBitmapFromURI(albumList[position], 200, 200)
 if (img != null) holder.itemView.photo.setImageBitmap(img)
 else holder.itemView.photo.setImageResource(R.drawable.ic_launcher_background)
 ```
+적용하니 정말 잘 돌아갑니다!
